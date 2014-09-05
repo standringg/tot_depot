@@ -20,7 +20,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 #START:jquery
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', "~>2.3"
 #START_HIGHLIGHT
 gem 'jquery-ui-rails'
 #END_HIGHLIGHT
