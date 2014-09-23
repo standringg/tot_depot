@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  f_name: Greg
+  l_name: Standring
+  address_1: 500 the grove
+  address_2: waitakeri
+  town_city: Auckland
+  post_code: 5050
+  phone: 5768243
+  email: greg@example.com
+  pay_type: Credit/Debit card
+
+two:
+  f_name: MyString
+  l_name: MyString
+  address_1: MyText
+  address_2: MyText
+  town_city: MyString
+  post_code: MyString
+  phone: MyString
+  email: MyString
+  pay_type: MyString
