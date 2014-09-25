@@ -1,0 +1,19 @@
+<h3>Tour of Tauranga - New Entry</h3>
+<p>
+The following entry has been processed
+<br>
+Customer Name: <%= @order.f_name %> <%= @order.l_name %>
+<br>
+has ordered the following items:
+<br>
+<table>
+  <tr><th colspan="2">Qty</th><th>Description</th></tr> 
+<%= render @order.line_items -%>
+</table>
+<br>
+Payment should show in your account within 2 days
+<br>
+Cheers
+<br>
+Tour of Tauranga Website
+</p>

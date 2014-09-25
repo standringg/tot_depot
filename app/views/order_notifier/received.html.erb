@@ -1,0 +1,24 @@
+<h3>Tour of Tauranga</h3>
+<p>
+Dear <%= @order.f_name %> <%= @order.l_name %>
+<br>
+<br>
+Thank you for your recent entry/s to the Tour of Tauranga.
+<br>
+You ordered the following items:
+</p>
+<table>
+  <tr><th colspan="2">Qty</th><th>Description</th></tr>
+<%= render @order.line_items -%>
+ 
+</table
+
+<p>
+<%= @order.f_name %> please print this email and bring it on the day to claim your ticket 
+<br>
+
+<br>
+Best regards
+<br>
+The Tour of Tauranga Team
+</p>

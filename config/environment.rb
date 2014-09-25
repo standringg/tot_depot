@@ -3,3 +3,17 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the Rails application.
 TotDepot::Application.initialize!
+
+TotDepot::Application.configure do 
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = { 
+  	address: "smtp.gmail.com", 
+  	port: 587, 
+  	domain: "standringg@gmail.com", 
+  	authentication: "plain", 
+  	user_name: "standringg@gmail.com", 
+  	password: "Apollo43", 
+  	enable_starttls_auto: true 
+  } 
+end

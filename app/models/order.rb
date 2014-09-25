@@ -9,5 +9,8 @@ class Order < ActiveRecord::Base
       line_items << item 
     end
   end
+  def order_total_price
+    product_price * quantity
+  end
 end
 

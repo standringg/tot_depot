@@ -1,0 +1,13 @@
+Dear <%= @order.f_name %> <%= @order.l_name %>
+
+Thank you for your recent entry/s to the Tour of Tauranga.
+
+You ordered the following items:
+
+<%= render @order.line_items -%>
+
+Please print this email and bring it on the day to claim your ticket 
+
+Best regards
+
+The Tour of Tauranga Team
