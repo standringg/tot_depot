@@ -6,6 +6,8 @@ You ordered the following items:
 
 <%= render @order.line_items -%>
 
+The total value of your order is <%= number_to_currency(@order.total_price) %>
+
 Please print this email and bring it on the day to claim your ticket 
 
 Best regards

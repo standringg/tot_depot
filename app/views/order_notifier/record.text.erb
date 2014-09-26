@@ -8,6 +8,8 @@ has ordered the following items:
 
 <%= render @order.line_items -%>
 
+The total value for this order is <%= number_to_currency(@order.total_price) %>
+
 Payment should show in your account within 2 days
 
 Cheers

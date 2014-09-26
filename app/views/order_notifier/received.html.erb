@@ -8,10 +8,14 @@ Thank you for your recent entry/s to the Tour of Tauranga.
 You ordered the following items:
 </p>
 <table>
-  <tr><th colspan="2">Qty</th><th>Description</th></tr>
+  <tr><th>Qty</th><th>Description</th><th>Value</th></tr> 
 <%= render @order.line_items -%>
- 
-</table
+<br>
+<tr class="total_line">
+  	<td></td><td>Total</td>
+    <td class="total_cell"><%= number_to_currency(@order.total_price) %></td>
+  </tr>
+</table>
 
 <p>
 <%= @order.f_name %> please print this email and bring it on the day to claim your ticket 

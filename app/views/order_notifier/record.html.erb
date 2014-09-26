@@ -7,8 +7,14 @@ Customer Name: <%= @order.f_name %> <%= @order.l_name %>
 has ordered the following items:
 <br>
 <table>
-  <tr><th colspan="2">Qty</th><th>Description</th></tr> 
+  <tr>
+  <th>Qty</th><th>Description</th><th>Value</th></tr>
 <%= render @order.line_items -%>
+<br>
+<tr class="total_line">
+  	<td></td><td>Total</td>
+    <td class="total_cell"><%= number_to_currency(@order.total_price) %></td>
+  </tr>
 </table>
 <br>
 Payment should show in your account within 2 days
