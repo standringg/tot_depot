@@ -43,8 +43,6 @@ Product.create!(title: 'Rails Test Prescriptions',
   image_url: 'rtp.jpg',
   price: 34.95)
 
-User.seed(:name, :password) do |s|
-      s.name = "standringg"
-      s.password = "password"
+Users = user.create({:name => 'standringg'},{:password =>'password'} ) 
       
     end
