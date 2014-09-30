@@ -30,6 +30,8 @@ class OrderNotifier < ActionMailer::Base
   #
   def record(order)
    @order = order 
+   
+    mail to: "standringg@gmail.com", subject: 'New Tour of Tauranga Entry'
 
     mail to: "touroftauranga@gmail.com", subject: 'New Tour of Tauranga Entry'
   end
