@@ -1,5 +1,5 @@
 class OrderNotifier < ActionMailer::Base
-  default from: 'Greg Standring <standringg@gmail.com>'
+  default from: 'Tour of Tauranga <touroftauranga@gmail.com>'
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -29,8 +29,10 @@ class OrderNotifier < ActionMailer::Base
   #   en.order_notifier.record.subject
   #
   def record(order)
-   @order = order
-
+   @order = order 
+   
     mail to: "standringg@gmail.com", subject: 'New Tour of Tauranga Entry'
+
+    mail to: "touroftauranga@gmail.com", subject: 'New Tour of Tauranga Entry'
   end
 end
