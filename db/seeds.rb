@@ -45,4 +45,4 @@ Product.create!(title: 'Rails Test Prescriptions',
 
 Users = user.create({:name => 'standringg'},{:password =>'password'} ) 
       
-    end
+   
