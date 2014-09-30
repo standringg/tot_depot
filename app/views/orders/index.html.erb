@@ -1,14 +1,22 @@
-<h1>Listing orders</h1>
-
-<table>
+<% provide(:title, 'Welcome') %>
+<div class="center hero-unit">
+  <div class="container"><h1>All Oders</h1>
+    
+<%= link_to "New Order", new_order_path, class: "btn btn-large btn-primary" %>
+<br>
+<br>
+<center>
+<div class="container">
+<h19>
+  <table class="table table-striped">
   <thead>
     <tr>
-      <th>F name</th>
-      <th>L name</th>
-      <th>Address 1</th>
-      <th>Address 2</th>
-      <th>Town city</th>
-      <th>Post code</th>
+      <th>Name</th>
+      <th></th>
+      <th>Address</th>
+      <th></th>
+      <th></th>
+      <th></th>
       <th>Phone</th>
       <th>Email</th>
       <th>Pay type</th>
@@ -21,8 +29,8 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-        <td><%= order.f_name %></td>
-        <td><%= order.l_name %></td>
+        <td> <%= order.f_name %></td>
+        <td><%= order.l_name %> </td>
         <td><%= order.address_1 %></td>
         <td><%= order.address_2 %></td>
         <td><%= order.town_city %></td>
@@ -37,7 +45,8 @@
     <% end %>
   </tbody>
 </table>
+</h19>
+</div>
+</Center>
 
-<br>
-
-<%= link_to 'New Order', new_order_path %>
+</div></div>

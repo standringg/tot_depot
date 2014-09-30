@@ -1,2 +1,5 @@
-<h1>Welcome</h1>
-It's <%= Time.now %> We have <%= pluralize(@total_orders, "order") %>. 
+<% provide(:title, 'Welcome') %>
+<div class="center hero-unit">
+  <div class="container"><h1>Welcome</h1>
+  	<center><h7>
+It's <%= Time.now %> We have <%= pluralize(@total_orders, "order") %>. <h7></center>

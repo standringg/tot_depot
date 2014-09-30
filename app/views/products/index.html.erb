@@ -1,9 +1,11 @@
-<h1>Listing products</h1>
-<table> 
+<% provide(:title, 'Welcome') %>
+<div class="center hero-unit">
+  <div class="container"><h1>All Products</h1>
+<table class= "table table-striped"> 
   <% @products.each do |product| %>
    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-    <td> <%= image_tag(product.image_url, class: 'list_image') %>
-     </td> <td class="list_description">
+    <td> <%= image_tag(product.image_url, class: 'list_image') %></td>
+      <td class="list_description">
       <dl>
        <dt><%= product.title %></dt>
        <dd><%= truncate(strip_tags(product.description), length: 80) %></dd> 

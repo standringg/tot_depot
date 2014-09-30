@@ -1,4 +1,9 @@
 TotDepot::Application.routes.draw do
+  match '/about',         to: 'static_pages#about',         via: 'get'
+  match '/course',        to: 'static_pages#course',        via: 'get'
+  match '/event_details', to: 'static_pages#event_details', via: 'get'
+  match '/store',         to: 'store#index',                via: 'get'
+  get "static_pages/home"
   get 'admin' => 'admin#index'
   controller :sessions do
     get  'login' => :new
@@ -28,7 +33,7 @@ TotDepot::Application.routes.draw do
   # first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   # You can have the root of your site routed with "root"
-  root 'store#index', as: 'store'
+  root 'static_pages#home', as: 'home'
   # ...
 
   # Example of regular route:

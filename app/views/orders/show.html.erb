@@ -1,5 +1,9 @@
-<p id="notice"><%= notice %></p>
-
+<% provide(:title, 'Order') %>
+<div class="center hero-unit">
+  <div class="container"><h1>Selected Order</h1><p id="notice"><%= notice %></p>
+<center>
+<div class="container">
+<h19>
 <p>
   <strong>F name:</strong>
   <%= @order.f_name %>
@@ -45,5 +49,21 @@
   <%= @order.pay_type %>
 </p>
 
+</h19>
+</div>
+</Center>
+<br><h19>
+<table class="table">
+  
+  <tr><th>Qty</th><th>Description</th><th>Value</th></tr> 
+<%= render @order.line_items -%>
+<br>
+<tr class="total_line">
+    <td></td><td>Total</td>
+    <td class="total_cell"><%= number_to_currency(@order.total_price) %></td>
+  </tr>
+
+</table></h19>
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
+</div></div>

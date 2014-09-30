@@ -1,3 +1,6 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will
  * include all the files listed below.
@@ -14,115 +17,345 @@
  *= require_tree .
  */
 
-#banner {
-  background: #9c9;
-  padding: 10px;
-  border-bottom: 2px solid;
-  font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
+/* mixins, variables, etc. */
+$blue: #003366;
+
+$orange: #ff9900;
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+r {
+  color: red;
+}
+
+b {
+  color: #611BBD;
+
+}
+
+rb {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: -1px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+ left {
+   float: left;
+   text-align: left;
+   margin-left: 8%;
+ }
+
+ left1 {
+   float: left;
+   text-align: left;
+   margin-left: 25%;
+ }
+
+ left3 {
+   float: left;
+   text-align: left;
+   margin-left: 18px;
+ }
+
+  left2 {
+   float: left;
+   text-align: left;
+   margin-left: 50px;
+ }
+right {
+   float: right;
+   text-align: right;
+   margin-right: 5%;
+ }
+ center {
+   line-height:50%;
+   float: center;
+ }
+
+.center {
   text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
 
-  img {
-    float: left;
+  p1 {
+    margin-bottom: 10px;
   }
 }
 
-#notice {
-  color: #000 !important;
-  border: 2px solid red;
-  padding: 1em;
-  margin-bottom: 2em;
-  background-color: #f0f0f0;
-  font: bold smaller sans-serif;
+/* typography */
+
+h1, h2, h3, h4, h5, h6 h7 {
+  line-height: 1;
 }
 
-#columns {
-  background: #141;
+h1 {
+  font-size: 4em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: $blue;
+}
 
-  #main {
-    margin-left: 23em;
-    padding: 1em;
-    background: white;
+h2 {
+  font-size: 2.9em;
+  line-height: 130%;
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: $blue;
+}
+
+h7 {
+  font-size: 2.2em;
+  line-height: 120%;
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: $blue;
+}
+
+h8 {
+  font-size: 1.7em;
+  line-height: 120%;
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: $blue;
   }
 
-//#START:side
-  #side {
-    float: left;
-    padding: 1em 2em;
-    width: 19em;
-    background: #141;
+  h9 {
+  font-size: 1.7em;
+  line-height: 120%;
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: bold;
+  color: $blue;
+  }
 
-/* START_HIGHLIGHT */
-    form, div {
-      display: inline;
-    }  
+  h19 {
+  font-size: 1.1em;
+  line-height: 120%;
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: bold;
+  color: $blue;
+  }
+
+  h10 {
+  font-size: 1.9em;
+  font-family: Palatino Linotype, Book Antiqua, serif;
+  font-style: italic;
+  line-height: 200%;
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $orange;
+}
+
+  h12 {
+  font-size: 1.2em;
+  line-height: 300%;
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-color: red;
+  }
+
+  h13 {
+  font-size: 2.9em;
+  line-height: 130%;
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: bold;
+  color: $blue;
+  }
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+p1 {
+  font-size: 0.8em;
+  line-height: 0.8em;
+  margin-right: 60px;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  padding-bottom: 6px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* navbar */
+
+#nav {
+color: white;
+  float: right;
+  a {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+
+}
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
  
-    input {
-      font-size: small;
-    }
-
-    #cart {
-      font-size: smaller;
-      color:     white;
-
-      table {
-        border-top:    1px dotted #595;
-        border-bottom: 1px dotted #595;
-        margin-bottom: 10px;
-      }
-    }
-
-/* END_HIGHLIGHT */
-    ul {
-      padding: 0;
-
-      li {
-        list-style: none;
-
-        a {
-          color: #bfb;
-          font-size: small;
-        }
-      }
+  color: grayLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: grayDarker;
     }
   }
-//#END:side
-}
-
-//#START:form
-.depot_form {
-  fieldset {
-    background: #efe;
-
-    legend {
-      color: #dfd;
-      background: #141;
-      font-family: sans-serif;
-      padding: 0.2em 1em;
-    }
+  small {
+    float: left;
+    margin-left: 0px;
   }
-
-  form {
-    label {
-      width: 5em;
+  copyright {
+    float: right;
+    text-align: center;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
       float: left;
-      text-align: right;
-      padding-top: 0.2em;
-      margin-right: 0.1em;
-      display: block;
-    }
-
-    select, textarea, input {
-      margin-left: 0.5em;
-    }
-
-    .submit {
-      margin-left: 4em;
-    }
-
-    br {
-      display: none
+      margin-right: 50px;
+      line-height: 450%;
     }
   }
 }
-//#END:form
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid grayLighter;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid grayLighter;
+    &:last-child {
+      border-bottom: 1px solid grayLighter;
+    }
+  }
+}

@@ -1,6 +1,9 @@
-<h1>Editing user</h1>
-
+<% provide(:title, 'Edit User') %>
+<div class="center hero-unit">
+  <div class="container">
+<h1>Edit User Details</h1>
+<h9>
 <%= render 'form' %>
-
+</h9>
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>

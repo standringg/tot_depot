@@ -1,0 +1,41 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <nav> 
+        <h10>"Life is a journey......enjoy the ride"</h10>
+          <h12 class="muted">
+            <ul class="nav pull-right">
+               <% if session[:user_id] %>
+               &nbsp;<td><%= link_to 'Orders', orders_path %></td>&nbsp;&nbsp;
+               &nbsp;<td><%= link_to 'Products', products_path %></td>&nbsp;&nbsp;
+               &nbsp;<td id="fat-menu" class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                     Account<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="divider"></li>
+                  <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+                  <li class="divider"></li>
+                  <li><%= link_to 'Users', users_path %></li>
+                </ul></td>&nbsp;&nbsp;
+            <% end %>
+
+
+
+
+
+
+
+                
+            
+              &nbsp;<td><%= link_to " Home ", home_path %></td>&nbsp;&nbsp;
+              &nbsp;<td><%= link_to " Course Map ", course_path %></td>&nbsp;&nbsp;
+              &nbsp;<td><%= link_to " Event Details ", event_details_path %></td>&nbsp;&nbsp;
+              &nbsp;<td><%= link_to " Shop ", store_path %></td>
+            </tr>  
+            </ul>
+          </h12>
+        </nav>
+      </div>
+    </div>
+</header>
+              

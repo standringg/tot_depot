@@ -1,9 +1,14 @@
+<% provide(:title, 'User Details') %>
+<div class="center hero-unit">
+  <div class="container">
+<h1>User Details</h1>
 <p id="notice"><%= notice %></p>
-
+<h9>
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
 </p>
-
+</h9>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+</div></div>
