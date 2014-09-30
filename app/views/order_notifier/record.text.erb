@@ -1,16 +1,26 @@
-OrderNotifier#record
+Tour of Tauranga - New Entry
 
 The following entry has been processed
 
-Customer Name <%= @order.f_name %> <%= @order.l_name %>
+Customer Name: <%= @order.f_name %> <%= @order.l_name %>
+
+Address: <%= @order.address_1 %>  <%= @order.address_2 %>  <%= @order.town_city %>  <%= @order.post_code %>
+
+Phone: <%= @order.phone %>
+
+Email: <%= @order.email %>
 
 has ordered the following items:
 
+
 <%= render @order.line_items -%>
+Total <%= number_to_currency(@order.total_price) %>
+  
+The customer has been sent an email with our bank details.
 
-The total value for this order is <%= number_to_currency(@order.total_price) %>
+Payment should show in our account within 2 days of the deposit.
 
-Payment should show in your account within 2 days
+After payment has cleared, please Email the customer an entry to bring on the day.
 
 Cheers
 

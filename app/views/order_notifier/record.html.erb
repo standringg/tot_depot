@@ -4,6 +4,12 @@ The following entry has been processed
 <br>
 Customer Name: <%= @order.f_name %> <%= @order.l_name %>
 <br>
+Address: <%= @order.address_1 %>  <%= @order.address_2 %>  <%= @order.town_city %>  <%= @order.post_code %>
+<br>
+Phone: <%= @order.phone %>
+<br>
+Email: <%= @order.email %>
+<br>
 has ordered the following items:
 <br>
 <table>
@@ -17,8 +23,11 @@ has ordered the following items:
   </tr>
 </table>
 <br>
-Payment should show in your account within 2 days
+The customer has been sent an email with our bank details.
 <br>
+Payment should show in our account within 2 days of the deposit.
+<br>
+After payment has cleared, please Email the customer an entry to bring on the day.
 Cheers
 <br>
 Tour of Tauranga Website

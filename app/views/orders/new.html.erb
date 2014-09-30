@@ -1,6 +1,10 @@
-<div class="depot_form">
+<% provide(:title, 'New Order') %>
+<div class="center hero-unit">
+  <div class="container"><h1>New Order</h1><% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %><div class="depot_form">
   <fieldset>
-  	<legend>Please Enter Your Details</legend>
-  	<%= render 'form' %>
+  	<legend><h19>Please Enter Your Details</h19></legend>
+  	<h19><%= render 'form' %></h19>
   </fieldset>
 </div> 

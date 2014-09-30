@@ -1,5 +1,8 @@
-<% if notice %>
+<% provide(:title, 'Your Cart') %>
+<div class="center hero-unit">
+  <div class="container"><h1>Your Cart</h1><% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-
+<center>
 <%= render @cart %>
+</center>

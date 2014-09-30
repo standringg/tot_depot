@@ -1,12 +1,18 @@
-<h2>Your Cart</h2> 
+ 
 <table> 
   <%= render(@cart.line_items) %>
-  
+  <br><br>
   <tr class="total_line">
-  	<td colspan="2">Total</td>
-    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+  	<td colspan="2"><h19>Total</h19></td>
+    <td class="total_cell"><h19><%= number_to_currency(@cart.total_price) %></h19></td>
   </tr>
 </table>
-
-<%= button_to "Checkout", new_order_path, method: :get %>
-<%= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?' } %>
+<br>
+<table>
+	<tr><td><%= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-large btn-primary" %></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><%= link_to "Return to Shop", store_path, class: "btn btn-large btn-primary"  %></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><%= button_to "Checkout", new_order_path, method: :get , class: "btn btn-large btn-primary" %></td>
+</tr>
+</table>

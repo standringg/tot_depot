@@ -10,21 +10,16 @@
     <%= render 'layouts/shim' %>
   
   </head>
-  <body class="<%= controller.controller_name %>>
+  <body>
     <div class="container">
-
     <%= render 'layouts/header' %>
     <% flash.each do |key, value| %>
         <%= content_tag(:div, value, class: "alert alert-#{key}") %>
         <% end %>
-       <div id="columns">
-        <div id="side">
-          <div id="cart">
-            <%= render @cart %>
-        </div>
+       
       <div id="main"> 
       <%= yield %>
-    </div></div>
+    </div>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
     </div>
