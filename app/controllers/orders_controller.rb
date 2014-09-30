@@ -41,6 +41,7 @@ class OrdersController < ApplicationController
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver
         OrderNotifier.record(@order).deliver
+        OrderNotifier.shipped(@order).deliver
         format.html { redirect_to store_url, notice: 
           'Thank you for your order, please check your inbox for our confirmation email with payment instructions!' }
         format.json { render action: 'show', status: :created,

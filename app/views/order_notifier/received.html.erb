@@ -12,24 +12,28 @@ You ordered the following items:
 <%= render @order.line_items -%>
 <br>
 <tr class="total_line">
-  	<td></td><td>Total</td>
+  	<td></td><td> Total </td>
     <td class="total_cell"><%= number_to_currency(@order.total_price) %></td>
   </tr>
 </table>
 
 <p>
-<%= @order.f_name %> please deposit payment into our bank account
+<%= @order.f_name %> please deposit payment into our bank account!
 <br>
+<BR>
 BOPMS Bank Account Details
 <br>
-Bank name: Westpac. Account number: 
+Bank name: Westpac. Account number: 03-0445-023-6737-00
 <br>
-Please include your name and initials on the deposit.
+PLEASE INCLUDE YOUR NAME AND INITIALS ON THE DEPOSIT.
+<br>
 <br>
 Once payment has cleared into our account we will email you an entry to print and bring on the day.
 <br>
 <br>
+<br>
 Best regards
+<br>
 <br>
 The Tour of Tauranga Team
 </p>

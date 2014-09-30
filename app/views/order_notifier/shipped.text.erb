@@ -1,3 +1,25 @@
-OrderNotifier#shipped
+Dear <%= @order.f_name %> <%= @order.l_name %>
 
-<%= @greeting %>, find me in app/views/app/views/order_notifier/shipped.text.erb
+Thank you for your recent entry/s to the Tour of Tauranga.
+
+You ordered the following items:
+
+<%= render @order.line_items -%>
+
+The total value of your order is <%= number_to_currency(@order.total_price) %>
+
+<%= @order.f_name %> please deposit payment into our bank account
+
+BOPMS Bank Account Details
+
+Bank name: Westpac. Account number: 03-0445-023-6737-00
+
+Please include your name and initials on the deposit.
+
+Once payment has cleared into our account we will email you an entry to print and bring on the day.
+
+
+Best regards
+
+The Tour of Tauranga Team
+

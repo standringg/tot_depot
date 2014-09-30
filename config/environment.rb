@@ -10,10 +10,10 @@ TotDepot::Application.configure do
   config.action_mailer.smtp_settings = { 
   	address: "smtp.gmail.com", 
   	port: 587, 
-  	domain: "standringg@gmail.com", 
+  	domain: "touroftauranga@gmail.com", 
   	authentication: "plain", 
-  	user_name: "standringg@gmail.com", 
-  	password: "Apollo43", 
+  	user_name: "touroftauranga@gmail.com", 
+  	password: "msbikeride2014", 
   	enable_starttls_auto: true 
   } 
 end
