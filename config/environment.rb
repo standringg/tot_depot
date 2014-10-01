@@ -12,8 +12,8 @@ TotDepot::Application.configure do
   	port: 587, 
   	domain: "touroftauranga@gmail.com", 
   	authentication: "plain", 
-  	user_name: "touroftauranga@gmail.com", 
-  	password: "msbikeride2014", 
+  	user_name: "app29208050@heroku.com", 
+  	password: "6xici22o", 
   	enable_starttls_auto: true 
   } 
 end
