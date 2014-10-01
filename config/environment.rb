@@ -10,7 +10,7 @@ TotDepot::Application.configure do
   config.action_mailer.smtp_settings = { 
   	address: "smtp.sendgrid.net", 
   	port: 587, 
-  	domain: "touroftauranga@gmail.com", 
+  	domain: "app29208050@heroku.com", 
   	authentication: "plain", 
   	user_name: "app29208050@heroku.com", 
   	password: "6xici22o", 
