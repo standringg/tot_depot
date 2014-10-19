@@ -1,6 +1,6 @@
 <% provide(:title, 'Welcome') %>
 <div class="center hero-unit">
-  <div class="container"><h1>All Products</h1>
+  <div class="container"><table><tr><td width="30%"></td><td width="30%"><h1>All Products</h1></td><td width ="30%"><%= link_to 'New Product', new_product_path, class: "btn btn-large btn-primary" %></td><td width="10%"></td></tr></table></div>
 <table class= "table table-striped"> 
   <% @products.each do |product| %>
    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
@@ -22,4 +22,4 @@
 <br />
 
 
-<%= link_to 'New Product', new_product_path %>
+
