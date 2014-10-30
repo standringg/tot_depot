@@ -2,9 +2,9 @@ class LineItemsController < ApplicationController
   skip_before_action :authorize
   include CurrentCart
   skip_before_action :authorize, only: :creat
-  before_action :set_cart, only: [:create]
-  before_action :set_line_item, only: [:show, :edit, :update, :destroy]
   before_action :set_cart, only: [:create, :decrease, :increase]
+  before_action :set_line_item, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /line_items
   # GET /line_items.json
@@ -34,7 +34,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to store_path, notice: 'The product has been added to your cart.' }
+        format.html { redirect_to store_url }
         format.js   { @current_item = @line_item }
         format.json { render action: 'show', status: :created, location: @line_item }
       else
