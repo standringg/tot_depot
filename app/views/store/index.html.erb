@@ -1,37 +1,44 @@
 <% provide(:title, 'Shop') %>
-<div class="center hero-unit">
-  <div class="container">
-<h1>
-<div class="container">
-  <tr><td>
-Tour of Tauranga Catalogue</td><td><right><%= link_to " V i e w . C a r t ", @cart, class: "btn btn-large btn-primary" %></right></td></tr></h1>
-</div>
-<table class= "table table-striped">
-  <tbody>
-    
-  <% cache ['store', Product.latest] do %>
-  <% @products.each do |product| %>
-  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-    <td><%= image_tag(product.image_url) %><td>
-    <% cache ['entry', product] do %> 
-      <div class="entry">
-       <dl> 
-        <dt><h8><%= product.title %><h8></dt>
-        <dd><h19><%= sanitize(product.description) %></h19></dd>
-        <td><h8><div class="price_line"><span class="price"><%= number_to_currency(product.price) %></span></h8></td>
-        <td><%= button_to 'Add to Cart', line_items_path(product_id: product), class: "btn btn-large btn-primary" %></td>
-        </dl>
-      </div></div>
-  </tr>
-    </tbody>
- <% end %>
-  <% end %>
-<% end %>
 
-        </table>
-
-         </div>
+<div class="center row">
+  <fieldset>
+    <div class="small-12 large-12 columns">
+      <div class="center row">
+        <div class="small-12 large-12 columns">
+          <h22>Tour of Tauranga Catalogue</h22>
+          <br>
+          <br>
+          <% cache ['store', Product.latest] do %>
+          <% @products.each do |product| %>
+          <% cache ['entry', product] do %>
+          <div class="entry">
+            <table>
+              <tr>
+                <td width="25%">
+                  <%= image_tag(product.image_url) %>
+                <td/>
+                <td>
+                  <h19><%= product.title %></h19>
+                  <br>
+                  <br>
+                  <%= sanitize(product.description) %>
+                </td>
+                <td width="15%">
+                  <right><%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true, class: "button small radius" %></right>
+                  <br>
+                  <h8><div class="price_line"><span class="price"><%= number_to_currency(product.price) %></span></h8>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <% end %>
+          <% end %>
+          <% end %>
+        </div>
       </div>
+    </div>
+  </fieldset>
+</div>
    
 
    

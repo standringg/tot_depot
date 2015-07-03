@@ -3,9 +3,12 @@
 <% else %>
 <tr>
 <% end %>
-   
-  <td><h19><%= line_item.quantity %>&times;</h19></td>
-  <td><h19><%= line_item.product.title %><h19></td>
-  <td class="item_price"><h19><%= number_to_currency(line_item.total_price) %><h19></td>
-</tr>
+<tr>
+  <td width="10%"><%= button_to "-", decrease_line_item_path(line_item), :method => :put, remote: true, class: "button tiny radius" %></td>
+  <td width="10%"><%= button_to "+", increase_line_item_path(line_item), :method => :put, remote: true, class: "button tiny radius" %></td>
+  <td width="10%"><%= line_item.quantity %>&times;<br><br></td>
+  <td width="60%"><%= line_item.product.title %><br><br></td>
+  <td width="10%" class="item_price"><right><%= number_to_currency(line_item.total_price) %></right><br><br></td>
+</tr> 
+
  

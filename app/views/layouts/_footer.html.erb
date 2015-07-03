@@ -1,31 +1,13 @@
-<footer class="footer">
-  <div class="container">
-	<p> <right><%= link_to ".",   users_path %></right>
-  <left3> 
-<small>
-      	&nbsp;<%= link_to image_tag("FindUsOnFB-144.png", alt: "Facebook" ), 'http://facebook.com/touroftauranga', :target=>"_blank" %>      	
-      </small>
-
-    </left3><div>
-        <center>&nbsp;&nbsp;&nbsp;&nbsp;<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.touroftauranga.co.nz&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=lucida+grande&amp;height=80&amp;appId=412659185421408" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe></center>
-      </div>
-    <br>
-       
-      
-  <small>
-    <a><%= link_to image_tag("msbop.png", alt: "BOPMS"), 'http://bopms.co.nz/',:target=>"_blank" %></a>
-  </small>
-  <br>
-  <ul>
-  	<li>
-      <%= link_to "About",   about_path %>
-  	</li>
-  </ul>
-  <br>
-    <center>
-      Copyright 2014. BOP MS Society. All rights reserved.</P1>&nbsp;&nbsp;&nbsp;&nbsp;
-    </center>
+<div class="row">
+    <div class="small-3 columns large-3 columns"><left><%= link_to image_tag("FindUsOnFB-144.png", alt: "Facebook" ), 'http://facebook.com/touroftauranga', :target=>"_blank" %></left></div>
+    <div class="small-6 columns large-6 columns"><center><a><%= link_to image_tag("msbop.png", alt: "BOPMS"), 'http://bopms.co.nz/',:target=>"_blank" %></a></center></div>
+    <div class="small-3 columns large-3 columns"><right><%= link_to ".",   "#" %></right></div>
   </div>
- </footer>    
+  <br>
+  <div class="row">
+    <div class="small-3 columns large-3 columns"><left><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.touroftauranga.co.nz&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=lucida+grande&amp;height=80&amp;appId=412659185421408" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe></left></div>
+    <div class="small-6 columns large-6 columns"><center><p1>&#0169;Copyright 2014. BOP MS Society. All rights reserved.</P1></center></div>
+    <div class="small-3 columns large-3 columns"><right><%= link_to "About",   about_path %></right></div>
+  </div>
 
 
